@@ -1,0 +1,2362 @@
+/* =========================
+   NAVBAR FIXED LEFT + LOGO + BUTTON VISIBLE (Adaptive)
+========================= */
+
+html, body {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 10.54vh; /* 103px → adaptive */
+  padding: 0 3.12vw; /* 60px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #FFFBFB59;
+  box-sizing: border-box;
+}
+
+/* =========================
+   NAVBAR2 — Transparent Background
+========================= */
+
+.navbar2 {
+  width: 100vw;
+  max-width: 1920px;
+  height: 9.54vh; /* 103px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.04vw; /* 20px */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #FFFBFB59;
+  backdrop-filter: none;
+  transition: opacity 0.4s ease, background 1s ease;
+}
+
+.navbar2.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+/* =========================
+   NAVBAR ELEMENTS
+========================= */
+
+.vfilms-logo2 {
+  width: 9.06vw;  /* 174px */
+  height: auto;
+  border-radius: 50px;
+  padding: 0.26vw 1.3vw 0.52vw 1.3vw; /* 5px 25px 10px 25px */
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.equal-icon2 {
+  width: 2.6vw; /* 50px */
+  height: 2.6vw;
+  cursor: pointer;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.nav-left2,
+.nav-right2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25vw; /* 24px */
+}
+
+/* =========================
+   FONT & LINKS
+========================= */
+
+.nav-links li a {
+  color: #333;
+  font-size: clamp(0.9rem, 0.9vw, 1.1rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-links li a:hover {
+  color: #ef4b2b;
+}
+
+.nav-icon {
+  width: 2.35vw; /* 26px */
+  height: 2.35vw;
+  cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+@media (max-width: 1024px) {
+  .navbar2 {
+    height: 8vh;
+    padding: 1.5vw 3vw;
+  }
+
+  .vfilms-logo2 {
+    width: 7vw;
+    padding: 0.5vw 1.5vw;
+  }
+
+  .equal-icon2 {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar2 {
+    height: 7vh;
+    padding: 2vw 4vw;
+  }
+
+  .vfilms-logo2 {
+    width: 20vw;
+    padding: 0.5vw 2vw;
+  }
+
+  .equal-icon2 {
+    width: 7vw;
+    height: 7vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar2 {
+    height: 8vh;
+    padding: 3vw 5vw;
+  }
+
+  .vfilms-logo2 {
+    width: 30vw;
+  }
+
+  .equal-icon2 {
+    width: 9vw;
+    height: 9vw;
+  }
+}
+
+/* =========================
+   GLOBAL LAYOUT + SCROLL
+========================= */
+
+.app-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.horizontal-scroll {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.panel {
+  flex: 0 0 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* =========================
+   NAVBAR LINKS
+========================= */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.nav-links li a {
+  color: #333;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-links li a:hover {
+  color: #ef4b2b;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+
+
+/* =========================
+   HERO (HOME PAGE) — ADAPTIVE
+========================= */
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Overlay container that holds mandala + text */
+.hero-overlay {
+  width: 100%;
+  max-width: 73vw; /* 1400px of 1920 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw; /* 40px */
+}
+
+/* Left mandala and logo */
+.hero-left {
+  position: relative;
+  text-align: center;
+}
+
+.mandala-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.mandala {
+  width: 21.9vw; /* 420px → vw */
+  opacity: 0.8;
+}
+
+.vfilms-logo {
+  position: absolute;
+  top: 51%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  width: 14.1vw; /* 270px */
+}
+
+/* Right text block */
+.hero-right {
+  max-width: 43vw; /* 825px */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main quote */
+.hero-quote {
+  font-family: "Island Moments", cursive;
+  font-size: clamp(2.5rem, 5vw, 6.5rem); /* 100px fluid */
+  font-weight: 400;
+  color: #0f3255;
+  line-height: 1.1;
+  margin-bottom: 2.8vh; /* 30px */
+}
+
+/* Subtext below quote */
+.hero-sub {
+  font-family: "Halant", serif;
+  font-size: clamp(1.2rem, 2vw, 2.5rem); /* 40px fluid */
+  color: #ef4b2b;
+  margin: 0 auto 2.3vh auto; /* 25px bottom */
+}
+
+/* Description text */
+.hero-desc {
+  width: 25.4vw; /* 487px */
+  font-size: clamp(0.8rem, 0.9vw, 1.2rem);
+  color: #333;
+  line-height: 1.3;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* =========================
+   RESPONSIVE BEHAVIOR
+========================= */
+
+@media (max-width: 1200px) {
+  .hero-overlay {
+    flex-direction: column;
+    gap: 4vh;
+  }
+
+  .hero-right {
+    max-width: 80%;
+  }
+
+  .hero-quote {
+    font-size: clamp(2rem, 5vw, 5rem);
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 2rem);
+  }
+
+  .hero-desc {
+    width: 70%;
+    font-size: clamp(0.9rem, 1vw, 1.2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .mandala {
+    width: 45vw;
+  }
+
+  .vfilms-logo {
+    width: 30vw;
+  }
+
+  .hero-quote {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+
+  .hero-desc {
+    width: 80%;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay {
+    flex-direction: column;
+    gap: 5vh;
+  }
+
+  .mandala {
+    width: 60vw;
+  }
+
+  .vfilms-logo {
+    width: 40vw;
+  }
+
+  .hero-quote {
+    font-size: clamp(1.8rem, 7vw, 3.2rem);
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+  }
+
+  .hero-desc {
+    width: 85%;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  }
+}
+
+
+/* =========================
+   ABOUT TEAM PAGE — ADAPTIVE
+========================= */
+
+.about-team {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scale wrapper to maintain Figma proportions */
+.about-scale-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  overflow: visible;
+  z-index: 3;
+}
+
+/* =========================
+   ELEMENTS
+========================= */
+
+/* Note Image */
+.note-img {
+  position: absolute;
+  width: 30.1vw;  /* 520px */
+  height: auto;
+  top: 0.2vh; /* 132px */
+  left: 8.1vw; /* 251px */
+  z-index: 1000;
+}
+
+/* India Gate */
+.indiagate-img {
+  position: absolute;
+  width: 19.8vw; /* 342px */
+  height: auto;
+  top: 52vh; /* 560px */
+  left: 5.3vw; /* 140px */
+}
+
+/* Silhouettes */
+.silhouettes-img {
+  position: absolute;
+  width: 32.5vw; /* 528px */
+  height: auto;
+  top: 34.2vh; /* 391px */
+  left: 52vw; /* 1000px */
+}
+
+/* Arrows */
+.arrow-branding {
+  position: absolute;
+  width: 10.3vw; /* 198px */
+  height: auto;
+  top: 50.6vh; /* 503px */
+  left: 39vw; /* 692px */
+}
+
+.arrow-filmmakers {
+  position: absolute;
+  width: 7.9vw; /* 151px */
+  height: auto;
+  top: 21.2vh; /* 229px */
+  left: 57.6vw; /* 1107px */
+}
+
+.arrow-art {
+  position: absolute;
+  width: 5.4vw; /* 103px */
+  height: auto;
+  top: 36.4vh; /* 393px */
+  left: 85.6vw; /* 1548px */
+}
+
+/* =========================
+   TEXT STYLES
+========================= */
+
+.about-desc-text {
+  position: absolute;
+  width: 36.4vw; /* 700px */
+  top: 76vh; /* 735px */
+  left: 48.4vw; /* 891px */
+  font-family: "Halant", serif;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 1.7vw, 2rem); /* 30px */
+  color: #0f3255;
+  text-align: center;
+}
+
+/* Category Texts */
+.branding-text1,
+.filmmakers-text,
+.artcurators-text {
+  position: absolute;
+  font-family: "Island Moments", cursive;
+  font-size: clamp(1.2rem, 1.8vw, 2.25rem); /* 36px */
+  color: #0f3255;
+  line-height: 1.1;
+}
+
+/* Individual positioning */
+.branding-text1 { top: 73vh; left: 32.4vw; }
+.filmmakers-text { top: 13.8vh; left: 54.2vw; }
+.artcurators-text { top: 26.6vh; left: 87.8vw; }
+
+/* =========================
+   BUTTON
+========================= */
+
+.about-btn {
+  position: absolute;
+  width: 8.1vw; /* 136px */
+  height: 4.4vh; /* 44px */
+  top: 87.4vh; /* 825px */
+  left: 63.2vw; /* 1213px */
+  border-radius: 24px;
+  padding: 1vh 1vw;
+  background-color: #ef4b2b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.about-btn:hover {
+  background-color: #d8431f;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+@media (max-width: 1200px) {
+  .about-scale-wrapper img {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-desc-text {
+    width: 70%;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    top: 68vh;
+    left: 15vw;
+  }
+
+  .branding-text,
+  .filmmakers-text,
+  .artcurators-text {
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+  }
+
+  .about-btn {
+    top: 82vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .note-img,
+  .silhouettes-img,
+  .indiagate-img {
+    width: 60vw;
+  }
+
+  .about-desc-text {
+    width: 80%;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+  }
+
+  .branding-text,
+  .filmmakers-text,
+  .artcurators-text {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .about-btn {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+  }
+}
+
+
+
+
+/* =========================
+   FIGMA SCROLL INDICATOR
+========================= */
+
+.scroll-indicator-container {
+  position: fixed;
+  bottom: 30px;
+  left: 45px;
+  width: 100%;
+  height: 12px;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.scroll-indicator {
+  width: 200px;
+  height: 12px;
+  border-radius: 6px;
+  opacity: 1;
+  z-index: 2500;
+  pointer-events: none;
+  transition: transform 0.3s ease-out;
+  display: block;
+  position: relative;
+  background: none;
+}
+
+
+
+/* =========================
+   ABOUT US PAGE — ADAPTIVE
+========================= */
+
+.aboutus {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Maintain central scaling proportions */
+.aboutus-scale-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  overflow: visible;
+}
+
+/* =========================
+   LEFT HEADING + SUBTEXT
+========================= */
+
+.aboutus-heading {
+  position: absolute;
+  width: 37.4vw;      /* 662 px */
+  top: 24vh;          /* 240 px */
+  left: 11.5vw;       /* 220 px */
+  font-family: "Halant", serif;
+  font-size: clamp(1.4rem, 1.9vw, 2.1rem);
+  color: #0f3255;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.aboutus-subtext {
+  position: absolute;
+  width: 25vw; /* wider for multi-line layout */
+  top: 32.5vh;
+  left: 26vw;
+  transform: translateX(-50%);
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(1rem, 1.15vw, 1.4rem);
+  color: #0f3255;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+
+/* =========================
+   RIGHT CURSIVE TEXT
+========================= */
+
+.aboutus-righttext {
+  position: absolute;
+  width: 47.4vw;      /* 910 px */
+  top: 8.1vh;        /* 120 px */
+  left: 48.7vw;       /* 800 px */
+  font-family: "Island Moments", cursive;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 3.5vw, 4.2rem); /* ~67 px */
+  line-height: 1;
+  text-align: center;
+  color: #0f3255;
+  opacity: 1;
+}
+
+/* =========================
+   STICKERS & ILLUSTRATIONS
+========================= */
+
+.sticker {
+  position: absolute;
+  opacity: 1;
+  top: 54.4vh; /* 490 px */
+}
+
+.sticker1 { width: 17.7vw; height: auto; left: 6.3vw; }
+.sticker2 { width: 17.7vw; height: auto; left: 16.3vw; }
+.sticker3 { width: 17.7vw; height: auto; left: 26.3vw; }
+
+/* Semicircle + Mountain Sun */
+.semicircle-img {
+  position: absolute;
+  width: 46.2vw;  /* 830 px */
+  height: auto;
+  top: 47.6vh;    /* 460 px */
+  left: 53.7vw;   /* 915 px */
+}
+
+.mountain-sun-img {
+  position: absolute;
+  width: 29.4vw;  /* 450 px */
+  height: auto;
+  top: 65.5vh;    /* 580 px */
+  left: 62.9vw;   /* 1150 px */
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+@media (max-width: 1200px) {
+  .aboutus-righttext {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    width: 60vw;
+    left: 30vw;
+  }
+
+  .aboutus-heading {
+    width: 40vw;
+    left: 10vw;
+  }
+
+  .aboutus-subtext {
+    width: 35vw;
+    left: 12vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus-heading {
+    width: 80%;
+    top: 18vh;
+    left: 10%;
+    text-align: center;
+  }
+
+  .aboutus-subtext {
+    width: 80%;
+    top: 28vh;
+    left: 10%;
+    text-align: center;
+  }
+
+  .aboutus-righttext {
+    width: 90%;
+    top: 45vh;
+    left: 5%;
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
+
+  .sticker1, .sticker2, .sticker3 {
+    width: 22vw;
+    top: 60vh;
+  }
+
+  .semicircle-img {
+    width: 60vw;
+    top: 50vh;
+    left: 20vw;
+  }
+
+  .mountain-sun-img {
+    width: 40vw;
+    top: 60vh;
+    left: 30vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutus-heading {
+    font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+  }
+
+  .aboutus-subtext {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  }
+
+  .aboutus-righttext {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+    top: 48vh;
+  }
+
+  .sticker1, .sticker2, .sticker3 {
+    width: 28vw;
+  }
+
+  .semicircle-img {
+    width: 70vw;
+  }
+
+  .mountain-sun-img {
+    width: 45vw;
+  }
+}
+
+
+
+
+/* =========================
+   SERVICES PAGE — ADAPTIVE
+========================= */
+
+.services {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scale wrapper maintains 1920×1080 ratio */
+.services-scale-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  overflow: visible;
+}
+
+/* =========================
+   HEADING & UNDERLINE
+========================= */
+
+.services-heading {
+  position: absolute;
+  width: 45.7vw; /* 878px */
+  top: 7.5vh;   /* 135px */
+  left: 27vw;    /* 521px */
+  font-family: "Halant", serif;
+  font-weight: 400;
+  font-size: clamp(1.3rem, 2vw, 2.25rem); /* ~36px fluid */
+  line-height: 1;
+  text-align: center;
+  color: #0F3255;
+}
+
+.underline-img {
+  position: absolute;
+  width: 43vw;   /* 828px */
+  height: auto;
+  top: 14.1vh;   /* 151.89px */
+  left: 28.3vw;
+  opacity: 1;
+}
+
+/* =========================
+   TAPE DECORATIONS
+========================= */
+
+.tape {
+  position: absolute;
+  width: 12.2vw; /* 234px */
+  height: auto;
+  opacity: 1;
+  z-index: 5;
+}
+
+.tape-left {
+  top: 19.3vh; /* 190px */
+  left: 14.3vw; /* 255px */
+}
+
+.tape-middle {
+  top: 25.6vh; /* 255px */
+  left: 41.6vw; /* 800px */
+}
+
+.tape-right {
+  top: 18.6vh; /* 180px */
+  left: 69.1vw; /* 1307px */
+  transform: rotate(-180deg);
+}
+
+/* =========================
+   SERVICE IMAGES (Cards)
+========================= */
+
+.services-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* Base card styles */
+.service-img {
+  position: absolute;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 0.6vw;
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 2;
+}
+
+.service-img:hover {
+  transform: scale(1.05) rotate(0deg);
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 1vw 3vw 0 #00000040;
+}
+
+/* --- Film Production Card --- */
+.film {
+  width: 24.4vw; /* 449.4px */
+  height: auto;
+  top: 21vh; /* 205px */
+  left: 12.4vw; /* 238.55px */
+  transform: rotate(8deg);
+}
+
+/* --- Branding Card --- */
+.branding {
+  width: 22.9vw; /* 439.4px */
+  height: auto;
+  top: 29.1vh; /* 281.66px */
+  left: 36.4vw; /* 680.3px */
+  transform: rotate(0deg);
+}
+
+/* --- Art Curation Card --- */
+.art {
+  width: 24.4vw; /* 449.4px */
+  height: auto;
+  top: 21vh;
+  left: 59.4vw; /* 1120.85px */
+  transform: rotate(-8deg);
+}
+
+/* =========================
+   BORDER DESIGN
+========================= */
+
+.border-design {
+  position: absolute;
+  bottom: 0vh;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =========================
+   RESPONSIVE ADAPTATION
+========================= */
+
+@media (max-width: 1200px) {
+  .services-heading {
+    width: 70%;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    left: 15%;
+  }
+
+  .underline-img {
+    width: 55vw;
+    left: 22vw;
+  }
+
+  .film,
+  .branding,
+  .art {
+    width: 25vw;
+  }
+
+  .tape {
+    width: 14vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .film,
+  .branding,
+  .art {
+    position: relative;
+    transform: none;
+    margin: 2vh auto;
+    display: block;
+  }
+
+  .services-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+  }
+
+  .tape-left,
+  .tape-middle,
+  .tape-right {
+    display: none;
+  }
+
+  .underline-img {
+    width: 60vw;
+    left: 20vw;
+  }
+
+  .border-design {
+    bottom: 4vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-heading {
+    width: 80%;
+    left: 10%;
+    top: 10vh;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  .underline-img {
+    width: 70vw;
+    top: 13vh;
+    left: 15vw;
+  }
+
+  .service-img {
+    width: 70vw;
+    transform: none;
+  }
+
+  .border-design {
+    width: 100%;
+    bottom: 6vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-heading {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+
+  .underline-img {
+    width: 80vw;
+  }
+
+  .service-img {
+    width: 80vw;
+  }
+
+  .border-design {
+    bottom: 4vh;
+  }
+}
+
+
+
+
+
+/* =========================
+   FILM PRODUCTION PAGE — ADAPTIVE
+========================= */
+
+.film-production {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Maintain 1920x1080 proportions */
+.film-scale-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  overflow: visible;
+}
+
+/* =========================
+   HEADING + UNDERLINE
+========================= */
+
+.film-heading {
+  position: absolute;
+  width: 57vw;  /* 1100px */
+  top: 7.3vh;   /* 100px */
+  left: 21.3vw; /* 409px */
+  font-family: "Halant", serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  color: #0F3255;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.film-back {
+  position: absolute;
+  width: 8.3vw; /* 160px */
+  height: 10.8vh; /* 90px */
+  top: 19.9vh; /* 215px */
+  left: 10vw; /* 230px */
+  border-radius: 2vw; /* 24px */
+  padding: 0.8vw 1vw;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.film-back:hover {
+  transform: scale(1.05);
+}
+
+/* Optional if image/button inside needs centering */
+.film-back img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+.film-underline {
+  position: absolute;
+  width: 58.4vw; /* 968px */
+  height: auto;
+  top: 14.4vh;   /* 22vh roughly */
+  left: 20.5vw;  /* 27vw */
+}
+
+/* =========================
+   MAIN IMAGE WRAPPER
+========================= */
+
+.film-main-img-wrapper {
+  position: absolute;
+  top: 24.4vh;   /* 220px */
+  left: 18.3vw;  /* 410px */
+  width: 23.4vw; /* 429.4px */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.film-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.film-main-caption {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  color: #0F3255;
+  margin-top: 1vh;
+}
+
+/* =========================
+   TEXT PARAGRAPH
+========================= */
+
+.film-text {
+  position: absolute;
+  width: 27vw; /* 520px */
+  top: 26.1vh; /* 252px */
+  left: 46.4vw; /* 890px */
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.6rem);
+  line-height: 1.5;
+  color: #252729;
+  text-align: left;
+}
+
+/* =========================
+   EXPLORE TEXT + ARROW
+========================= */
+
+.film-explore-text {
+  position: absolute;
+  width: 10.4vw; /* 200px */
+  top: 79vh; /* 700px */
+  left: 44.8vw; /* 860px */
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+  line-height: 100%;
+  color: #0f3255;
+  text-align: center;
+  opacity: 1;
+}
+
+.film-arrow {
+  position: absolute;
+  width: 7.2vw; /* 120px */
+  height: auto;
+  top: 84.5vh; /* 740px */
+  left: 46.9vw; /* 900px */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.film-arrow:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   DECORATIVE CAMERAS
+========================= */
+
+.film-cam-left {
+  position: absolute;
+  width: 5.2vw; /* 100px */
+  height: auto;
+  top: 74.4vh; /* 620px */
+  left: 12.1vw; /* 290px */
+}
+
+.film-cam-right-top {
+  position: absolute;
+  width: 4.7vw; /* 91px */
+  height: auto;
+  top: 19.9vh; /* 215px */
+  left: 81.5vw; /* 1470px */
+}
+
+.film-cam-middle {
+  position: absolute;
+  width: 4.7vw;
+  height: auto;
+  top: 53.5vh; /* 470px */
+  left: 70.1vw; /* 1327px */
+}
+
+.film-cam-right-bottom {
+  position: absolute;
+  width: 4.2vw;
+  height: auto;
+  top: 73.2vh; /* 650px */
+  left: 80.5vw; /* 1490px */
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+@media (max-width: 1200px) {
+  .film-heading {
+    font-size: clamp(1.3rem, 1.8vw, 2rem);
+  }
+
+  .film-text {
+    width: 32vw;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+  }
+
+  .film-main-img-wrapper {
+    width: 26vw;
+  }
+
+  .film-back {
+    width: 9vw;
+    height: 7vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .film-text {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: 55vh;
+    text-align: center;
+  }
+
+  .film-main-img-wrapper {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .film-explore-text,
+  .film-arrow,
+  .film-back {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .film-cam-left,
+  .film-cam-right-top,
+  .film-cam-middle,
+  .film-cam-right-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .film-heading {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    top: 8vh;
+    width: 80%;
+    left: 10%;
+  }
+
+  .film-text {
+    width: 80%;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    top: 55vh;
+    left: 10%;
+  }
+
+  .film-main-img-wrapper {
+    width: 65vw;
+    top: 22vh;
+  }
+
+  .film-explore-text {
+    top: 80vh;
+  }
+
+  .film-arrow {
+    top: 84vh;
+    width: 10vw;
+  }
+
+  .film-back {
+    top: 10vh;
+    left: 10vw;
+    width: 18vw;
+    height: 8vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .film-heading {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+
+  .film-text {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+
+  .film-main-img-wrapper {
+    width: 80vw;
+  }
+
+  .film-arrow {
+    width: 12vw;
+  }
+
+  .film-explore-text {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
+
+  .film-back {
+    width: 24vw;
+    height: 8vh;
+    top: 8vh;
+  }
+}
+
+
+
+
+/* =========================
+   BRANDING PAGE — ADAPTIVE
+========================= */
+
+.branding-page {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Maintain 1920×1080 proportions */
+.branding-scale-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  overflow: visible;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.branding-heading {
+  position: absolute;
+  width: 57vw;  /* 1100px */
+  top: 6.9vh;   /* 100px */
+  left: 21.3vw; /* 409px */
+  font-family: "Halant", serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  color: #0F3255;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* =========================
+   MAIN IMAGE WRAPPER
+========================= */
+
+.branding-main-img-wrapper {
+  position: absolute;
+  top: 24.4vh;   /* 220px */
+  left: 18.3vw;  /* 410px */
+  width: 23.4vw; /* 429.4px */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.branding-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* =========================
+   PARAGRAPH TEXT
+========================= */
+
+.branding-text {
+  position: absolute;
+  width: 27vw; /* 520px */
+  top: 25vh;   /* 242px */
+  left: 46.4vw; /* 890px */
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.6rem);
+  line-height: 1.5;
+  color: #252729;
+  text-align: left;
+}
+
+/* =========================
+   DECORATIVE ICONS
+========================= */
+
+.branding-left {
+  position: absolute;
+  width: 5.2vw; /* 100px */
+  height: auto;
+  top: 76vh; /* 660px */
+  left: 11vw; /* 290px */
+}
+
+.branding-right-top {
+  position: absolute;
+  width: 5.9vw; /* 91px */
+  height: auto;
+  top: 20vh; /* 195px */
+  left: 83.5vw; /* 1470px */
+}
+
+.branding-right-middle {
+  position: absolute;
+  width: 4.3vw; /* 91px */
+  height: auto;
+  top: 55.5vh; /* 470px */
+  left: 69.1vw; /* 1327px */
+}
+
+.branding-right-bottom {
+  position: absolute;
+  width: 6.8vw; /* 111px */
+  height: auto;
+  top: 76.2vh; /* 650px */
+  left: 82.5vw; /* 1470px */
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+@media (max-width: 1200px) {
+  .branding-heading {
+    font-size: clamp(1.3rem, 1.8vw, 2rem);
+  }
+
+  .branding-text {
+    width: 32vw;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+  }
+
+  .branding-main-img-wrapper {
+    width: 26vw;
+  }
+
+  .branding-left,
+  .branding-right-top,
+  .branding-right-middle,
+  .branding-right-bottom {
+    width: 6vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .branding-main-img-wrapper {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 22vh;
+    width: 36vw;
+  }
+
+  .branding-text {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: 50vh;
+    text-align: center;
+  }
+
+  .branding-left,
+  .branding-right-top,
+  .branding-right-middle,
+  .branding-right-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .branding-heading {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    top: 8vh;
+    width: 80%;
+    left: 10%;
+  }
+
+  .branding-text {
+    width: 80%;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    top: 55vh;
+    left: 10%;
+  }
+
+  .branding-main-img-wrapper {
+    width: 65vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .branding-heading {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+
+  .branding-text {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+
+  .branding-main-img-wrapper {
+    width: 80vw;
+  }
+}
+
+
+
+/* =========================
+   ART CURATION PAGE — ADAPTIVE
+========================= */
+
+.art-page {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Maintain 1920×1080 proportions */
+.art-scale-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  overflow: visible;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.art-heading {
+  position: absolute;
+  width: 57vw;  /* 1100px */
+  top: 7.6vh;   /* 100px */
+  left: 21.3vw; /* 409px */
+  font-family: "Halant", serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  color: #0F3255;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* =========================
+   MAIN TEXT
+========================= */
+
+.art-text {
+  position: absolute;
+  width: 27vw; /* 520px */
+  top: 24vh;   /* 242px */
+  left: 45.4vw; /* 890px */
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.6rem);
+  line-height: 1.5;
+  color: #252729;
+  text-align: left;
+}
+
+/* =========================
+   DECORATIVE ICONS
+========================= */
+
+.art-left {
+  position: absolute;
+  width: 5.2vw; /* 100px */
+  height: auto;
+  top: 76vh; /* 660px */
+  left: 11.1vw; /* 290px */
+}
+
+.art-right-top {
+  position: absolute;
+  width: 5.7vw; /* 91px */
+  height: auto;
+  top: 20vh; /* 195px */
+  left: 80.5vw; /* 1470px */
+}
+
+.art-right-middle {
+  position: absolute;
+  width: 4.7vw; /* 91px */
+  height: auto;
+  top: 57vh; /* 530px */
+  left: 69.1vw; /* 1327px */
+}
+
+.art-right-bottom {
+  position: absolute;
+  width: 6.8vw; /* 111px */
+  height: auto;
+  top: 74.2vh; /* 650px */
+  left: 76.5vw; /* 1430px */
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+@media (max-width: 1200px) {
+  .art-heading {
+    font-size: clamp(1.3rem, 1.8vw, 2rem);
+  }
+
+  .art-text {
+    width: 32vw;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+  }
+
+  .art-left,
+  .art-right-top,
+  .art-right-middle,
+  .art-right-bottom {
+    width: 6vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .art-text {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: 50vh;
+    text-align: center;
+  }
+
+  .art-left,
+  .art-right-top,
+  .art-right-middle,
+  .art-right-bottom {
+    display: none;
+  }
+
+  .art-heading {
+    width: 80%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .art-heading {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    top: 8vh;
+    width: 80%;
+    left: 10%;
+  }
+
+  .art-text {
+    width: 80%;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    top: 55vh;
+    left: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .art-heading {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+
+  .art-text {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+}
+
+
+
+/* =========================
+   PORTFOLIO PAGE — ADAPTIVE (NO BACK BUTTON)
+========================= */
+
+.portfolio {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Maintain 1920×1080 proportions */
+.portfolio-scale-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  overflow: visible;
+}
+
+/* =========================
+   CENTER TEXT
+========================= */
+
+.portfolio-heading {
+  position: absolute;
+  width: 19vw; /* 364px */
+  top: 7vh;
+  left: 40.5vw;
+  text-align: center;
+  gap: 0.6vh;
+}
+
+.portfolio-heading h2 {
+  font-family: "Halant", serif;
+  font-size: clamp(1.5rem, 1.8vw, 2rem);
+  font-weight: 400;
+  color: #0f3255;
+  line-height: 1.2;
+  margin-bottom: 0.1vh;
+}
+
+.portfolio-heading p {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(1rem, 1.1vw, 1.3rem);
+  font-weight: 200;
+  color: #252729;
+  line-height: 1.2;
+}
+
+/* =========================
+   CENTER VIDEO FRAME
+========================= */
+
+.portfolio-center-frame {
+  position: absolute;
+  top: 25vh;  /* 198px */
+  left: 19.4vw; /* 469px */
+  width: 62vw;  /* 981px */
+  height: 62vh; /* 603px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.portfolio-center-img {
+  width: 75%;
+  height: auto;
+  border-radius: 0.8vw;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* =========================
+   DECORATIVE ELEMENTS
+========================= */
+
+/* Left Camera */
+.portfolio-left-camera {
+  position: absolute;
+  width: 11.7vw;  /* 187px */
+  height: auto;
+  top: 20vh;     /* 220px */
+  left: 8.5vw;  /* 240px */
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Right Pattern */
+.portfolio-right-pattern {
+  position: absolute;
+  width: 16.7vw; /* 340px */
+  height: auto;
+  top: 37vh;     /* 380px */
+  left: 83.4vw;  /* 1410px */
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Left Rectangle */
+.portfolio-left-rect {
+  position: absolute;
+  width: 4.6vw;  /* 70px */
+  height: 40.7vh; /* 288px */
+  top: 11.0vh;
+  left: 8.7vw;
+  border-radius: 4px;
+  opacity: 1;
+  z-index: 3;
+}
+
+/* Right Rectangle */
+.portfolio-right-rect {
+  position: absolute;
+  width: 4.6vw;  /* 70px */
+  height: 40.7vh;
+  top: 11.0vh;
+  left: 48.5vw;
+  border-radius: 4px;
+  opacity: 1;
+  z-index: 3;
+}
+
+/* Left Arrow */
+.portfolio-left-arrow {
+  position: absolute;
+  width: 2.8vw;  /* 39.74px */
+  height: 17vh;  /* 129.84px */
+  top: 25vh;
+  left: 9.7vw;
+  opacity: 1;
+  z-index: 4;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.portfolio-left-arrow:hover {
+  transform: scale(1.2);
+}
+
+/* Right Arrow */
+.portfolio-right-arrow {
+  position: absolute;
+  width: 2.8vw;  /* 39.74px */
+  height: 17vh;
+  top: 25vh;
+  left: 49.7vw;
+  opacity: 1;
+  z-index: 4;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.portfolio-right-arrow:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+@media (max-width: 1200px) {
+  .portfolio-heading {
+    top: 15vh;
+  }
+
+  .portfolio-center-frame {
+    width: 60vw;
+    left: 20vw;
+  }
+
+  .portfolio-left-camera,
+  .portfolio-right-pattern {
+    width: 12vw;
+  }
+
+  .portfolio-left-arrow,
+  .portfolio-right-arrow {
+    width: 3vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio-center-frame {
+    width: 70vw;
+    left: 15vw;
+  }
+
+  .portfolio-heading {
+    width: 80%;
+    left: 10%;
+  }
+
+  .portfolio-left-camera,
+  .portfolio-right-pattern,
+  .portfolio-left-rect,
+  .portfolio-right-rect {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-heading {
+    top: 8vh;
+  }
+
+  .portfolio-center-frame {
+    width: 80vw;
+    top: 22vh;
+  }
+
+  .portfolio-center-img {
+    width: 85%;
+  }
+
+  .portfolio-left-arrow,
+  .portfolio-right-arrow {
+    width: 5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-heading h2 {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+
+  .portfolio-heading p {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+
+  .portfolio-center-frame {
+    width: 90vw;
+  }
+}
+
+
+
+/* =========================
+   CONTACT PAGE — ADAPTIVE
+========================= */
+
+.contact {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Maintain 1920×1080 base proportion */
+.contact-scale-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  overflow: visible;
+}
+
+/* =========================
+   BACKGROUND DECORATIONS
+========================= */
+
+.contact-left-pattern {
+  position: absolute;
+  width: 22vw; /* 390px */
+  height: auto;
+  bottom: 0vh;   /* 460px */
+  left: 0vw;   /* 50px */
+  opacity: 1;
+  z-index: 1;
+}
+
+.contact-right-pattern {
+  position: absolute;
+  width: 23.8vw; /* 420px */
+  height: auto;
+  top: 0vh;      /* 68px */
+  right: 0vw;    /* 1340px */
+  opacity: 1;
+  z-index: 1;
+}
+
+/* =========================
+   LEFT TEXT
+========================= */
+
+.contact-left-text {
+  position: absolute;
+  width: 31vw; /* 600px */
+  top: 39vh;   /* 467px */
+  left: 9vw;  /* 210px */
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(1rem, 1.25vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: #252729;
+  text-align: left;
+  z-index: 2;
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.contact-form-section {
+  position: absolute;
+  width: 47.5vw; /* 700px */
+  height: auto;
+  top: 18vh; /* 200px */
+  left: 47vw; /* 1010px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2vh; /* space between elements */
+  z-index: 3;
+  text-align: center;
+}
+
+/* --- Heading --- */
+.contact-heading {
+  font-family: "Halant", serif;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-weight: 400;
+  color: #0F3255;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+}
+
+/* --- Subtext --- */
+.contact-subtext {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  font-weight: 400;
+  color: #252729;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 0.1vh;
+  margin-bottom: 4vh;
+}
+
+/* =========================
+   FORM BODY
+========================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2vh;
+  width: 100%;
+  height: auto;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  max-width: 38.5vw;
+  border: 1px solid #EAEAEA;
+  border-radius: 0.3vw;
+  padding: 1.1vh 1vw;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  outline: none;
+  resize: none;
+  background: #ffffffd9;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  box-shadow: 0 0 0.6vw rgba(15, 50, 85, 0.3);
+}
+
+.contact-textarea {
+  height: 14vh;
+  min-height: 120px;
+}
+
+/* Prevent movement when validation text appears */
+.contact-message {
+  min-height: 1.5rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  color: #ef4b2b;
+  margin-top: 0.5vh;
+  transition: opacity 0.2s ease;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.contact-submit {
+  width: 8vw; /* 93px */
+  height: 7.5vh; /* 46px */
+  border-radius: 24px;
+  padding: 0.6vh 1vw;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+}
+
+.contact-submit:hover {
+  transform: scale(1.05);
+}
+
+.contact-submit img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   FOOTER CONTACT INFO
+========================= */
+
+.contact-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4vh;
+  margin-top: 0vh;
+  text-align: center;
+}
+
+.contact-email,
+.contact-phone {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  color: #ef4b2b;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+@media (max-width: 1200px) {
+  .contact-left-text {
+    width: 40vw;
+    left: 6vw;
+  }
+  .contact-form-section {
+    left: 50vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-left-pattern,
+  .contact-right-pattern {
+    display: none;
+  }
+
+  .contact {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10vh;
+  }
+
+  .contact-form-section {
+    position: relative;
+    width: 80%;
+    left: 0;
+    top: 0;
+    margin-top: 5vh;
+  }
+
+  .contact-left-text {
+    position: relative;
+    width: 80%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin-top: 4vh;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+  }
+  .contact-subtext {
+    font-size: clamp(1rem, 2.8vw, 1.2rem);
+  }
+  .contact-left-text {
+    font-size: clamp(1rem, 2.8vw, 1.2rem);
+  }
+  .contact-submit {
+    width: 20vw;
+    height: 7vh;
+  }
+  .contact-footer {
+    flex-direction: column;
+    gap: 1vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+  .contact-subtext {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+  .contact-left-text {
+    font-size: clamp(0.9rem, 4vw, 1rem);
+  }
+  .contact-submit {
+    width: 28vw;
+    height: 6.5vh;
+  }
+}
