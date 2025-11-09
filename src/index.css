@@ -1,7 +1,6 @@
 /* =========================
    NAVBAR FIXED LEFT + LOGO + BUTTON VISIBLE (Adaptive)
 ========================= */
-
 html, body {
   scroll-behavior: smooth;
   overscroll-behavior: none;
@@ -10,6 +9,14 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+/* ✅ Mobile fix — enable vertical scrolling */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 * {
@@ -300,7 +307,7 @@ html, body {
 }
 
 .mandala {
-  width: 21.9vw; /* 420px → vw */
+  width: 23.9vw; /* 420px → vw */
   opacity: 0.8;
 }
 
@@ -342,7 +349,7 @@ html, body {
 /* Description text */
 .hero-desc {
   width: 25.4vw; /* 487px */
-  font-size: clamp(0.8rem, 0.9vw, 1.2rem);
+  font-size: clamp(0.8rem, 1.0vw, 1.2rem);
   color: #333;
   line-height: 1.3;
   text-align: center;
@@ -478,7 +485,7 @@ html, body {
   position: absolute;
   width: 19.8vw; /* 342px */
   height: auto;
-  top: 52vh; /* 560px */
+  bottom: 5vh; /* 560px */
   left: 5.3vw; /* 140px */
 }
 
@@ -487,7 +494,7 @@ html, body {
   position: absolute;
   width: 32.5vw; /* 528px */
   height: auto;
-  top: 34.2vh; /* 391px */
+  bottom: 23vh; /* 391px */
   left: 52vw; /* 1000px */
 }
 
@@ -523,7 +530,7 @@ html, body {
 .about-desc-text {
   position: absolute;
   width: 36.4vw; /* 700px */
-  top: 76vh; /* 735px */
+  bottom: 13vh; /* 735px */
   left: 48.4vw; /* 891px */
   font-family: "Halant", serif;
   font-weight: 400;
@@ -555,9 +562,9 @@ html, body {
 .about-btn {
   position: absolute;
   width: 8.1vw; /* 136px */
-  height: 4.4vh; /* 44px */
-  top: 87.4vh; /* 825px */
-  left: 63.2vw; /* 1213px */
+  height: 5.4vh; /* 44px */
+  bottom: 8vh; /* 825px */
+  right: 30vw; /* 1213px */
   border-radius: 24px;
   padding: 1vh 1vw;
   background-color: #ef4b2b;
@@ -748,7 +755,7 @@ html, body {
 .sticker {
   position: absolute;
   opacity: 1;
-  top: 54.4vh; /* 490 px */
+  bottom: 10vh; /* 490 px */
 }
 
 .sticker1 { width: 17.7vw; height: auto; left: 6.3vw; }
@@ -760,16 +767,16 @@ html, body {
   position: absolute;
   width: 46.2vw;  /* 830 px */
   height: auto;
-  top: 47.6vh;    /* 460 px */
-  left: 53.7vw;   /* 915 px */
+  bottom: 0vh;    /* 460 px */
+  right: 0vw;   /* 915 px */
 }
 
 .mountain-sun-img {
   position: absolute;
   width: 29.4vw;  /* 450 px */
   height: auto;
-  top: 65.5vh;    /* 580 px */
-  left: 62.9vw;   /* 1150 px */
+  bottom: 0vh;   /* 580 px */
+  right: 7vw;   /* 1150 px */
 }
 
 /* =========================
@@ -1922,8 +1929,8 @@ html, body {
   position: absolute;
   width: 16.7vw; /* 340px */
   height: auto;
-  top: 37vh;     /* 380px */
-  left: 83.4vw;  /* 1410px */
+  bottom: 0vh;     /* 380px */
+  right: 0vw;  /* 1410px */
   opacity: 1;
   z-index: 2;
 }
@@ -2358,5 +2365,310 @@ html, body {
   .contact-submit {
     width: 28vw;
     height: 6.5vh;
+  }
+}
+
+
+
+/* Allow vertical scroll only on small screens (mobile) */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .app-wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .horizontal-scroll {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    height: auto;
+  }
+
+  .panel {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero {
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  .navbar, .navbar2 {
+    z-index: 2000;
+  }
+
+  .talk-img {
+    width: 28vw;
+  }
+
+  .nav-icon {
+    width: 8vw;
+  }
+}
+
+
+
+/* =========================
+   MOBILE LAYOUT FIX: OVERRIDE ABSOLUTE POSITIONING (<= 768px)
+========================= */
+
+@media (max-width: 768px) {
+
+  /* --- 1. Global Wrapper Reset --- */
+
+  /* Force all "scale wrappers" to use normal document flow (relative position, full width, column direction) */
+  .about-scale-wrapper,
+  .aboutus-scale-wrapper,
+  .services-scale-wrapper,
+  .film-scale-wrapper,
+  .branding-scale-wrapper,
+  .art-scale-wrapper,
+  .portfolio-scale-wrapper,
+  .contact-scale-wrapper {
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    height: auto !important; /* Allow content to dictate height */
+    width: 100% !important;
+    display: flex; /* Use flexbox to align content vertically */
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 5vw 5vh 5vw; /* Add vertical padding for breathing room */
+  }
+
+  /* --- 2. Absolute Element Reset --- */
+
+  /* Force all formerly absolutely-positioned children (images, text blocks) into flow */
+  .about-scale-wrapper > *,
+  .aboutus-scale-wrapper > *,
+  .film-scale-wrapper > *,
+  .branding-scale-wrapper > *,
+  .art-scale-wrapper > *,
+  .portfolio-scale-wrapper > *,
+  .contact-scale-wrapper > * {
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 10px auto !important; /* Center content horizontally and give vertical space */
+    width: 90% !important; /* Make most elements full width */
+    text-align: center !important;
+    display: block;
+    box-sizing: border-box; /* Crucial for preventing horizontal overflow */
+  }
+
+  /* --- 3. Hide Decorative Overlays (They cause clutter/overflow on mobile) --- */
+
+  .contact-left-pattern,
+  .contact-right-pattern,
+  .border-design,
+  .tape,
+  /* Film, Branding, Art Deco Images */
+  .film-cam-left, .film-cam-right-top, .film-cam-middle, .film-cam-right-bottom,
+  .branding-left, .branding-right-top, .branding-right-middle, .branding-right-bottom,
+  .art-left, .art-right-top, .art-right-middle, .art-right-bottom,
+  /* Portfolio Deco */
+  .portfolio-left-camera, .portfolio-right-pattern,
+  .portfolio-left-rect, .portfolio-right-rect,
+  /* About Us/About Team Deco Images */
+  .semicircle-img, .mountain-sun-img,
+  .indiagate-img, .silhouettes-img,
+  .arrow-branding, .arrow-filmmakers, .arrow-art,
+  .underline-img /* Keep text headings visible, hide underline decoration */
+  {
+    display: none !important; /* Hide elements that clutter the vertical flow */
+  }
+
+  /* --- 4. Content Specific Adjustments --- */
+
+  /* Text paragraphs need specific flow and sizing */
+  .aboutus-subtext, .aboutus-righttext,
+  .film-text, .branding-text, .art-text,
+  .contact-left-text, .about-desc-text {
+    width: 90% !important;
+    text-align: center !important;
+    font-size: clamp(1rem, 4vw, 1.2rem) !important;
+    order: 10; /* Push long text to the bottom of the flex container */
+    margin: 10px auto 20px auto !important;
+  }
+
+  /* Main Images (Film/Branding/Art/Portfolio center) */
+  .film-main-img-wrapper, .branding-main-img-wrapper,
+  .portfolio-center-frame {
+    width: 85% !important;
+    order: 5;
+    margin: 20px auto !important;
+    top: auto !important;
+    left: auto !important;
+    position: relative !important;
+  }
+
+  /* Services cards stacking vertically */
+  .services-images {
+      flex-direction: column !important;
+      gap: 4vh;
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      width: 100% !important;
+  }
+  .service-img {
+      width: 85% !important;
+      transform: none !important;
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+  }
+
+  /* Scroll Indicator is often in the way on mobile, so hide it */
+  .scroll-indicator-container {
+    display: none;
+  }
+}
+
+
+/* =========================
+   FINAL RESPONSIVE FIX FOR MOBILE LAYOUT
+========================= */
+@media (max-width: 768px) {
+
+  /* 1. Allow normal vertical flow */
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  /* 2. Remove any global scaling that squeezes content */
+  body {
+    transform: none !important;
+  }
+
+  /* 3. Make every section full width and natural height */
+  section,
+  .hero,
+  .aboutus,
+  .about-team,
+  .services,
+  .portfolio,
+  .contact {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    padding: 0 5vw !important;
+    margin: 0 auto !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* 4. Force all wrapper divs to use full width and stack vertically */
+  .hero-overlay,
+  .services-scale-wrapper,
+  .aboutus-scale-wrapper,
+  .about-scale-wrapper,
+  .portfolio-scale-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3vh !important;
+    position: relative !important;
+  }
+
+  /* 5. Images: scale down but still span container width */
+  img {
+    max-width: 90% !important;
+    height: auto !important;
+  }
+
+  /* 6. Text blocks: limit line length and center */
+  h1, h2, h3, p {
+    width: 90% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* 7. Navbar adjustments */
+  .navbar, .navbar2 {
+    width: 100%;
+    justify-content: space-between;
+    padding: 2vh 5vw;
+    z-index: 2000;
+  }
+
+  /* 8. Horizontal scroll container becomes vertical stack */
+  .horizontal-scroll {
+    flex-direction: column !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scroll-snap-type: none !important;
+    height: auto !important;
+  }
+
+  .panel {
+    flex: 0 0 auto !important;
+    height: auto !important;
+  }
+}
+
+
+/* =========================
+   TOAST MESSAGE STYLES
+========================= */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 20, 0.9);
+  color: white;
+  font-family: "Instrument Sans", sans-serif;
+  padding: 12px 24px;
+  border-radius: 8px;
+  z-index: 5000;
+  animation: toastSlide 0.4s ease, fadeOut 0.5s ease 2.5s forwards;
+  font-size: 16px;
+}
+
+.toast-success {
+  background: #28a745;
+}
+
+.toast-error {
+  background: #d9534f;
+}
+
+@keyframes toastSlide {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -20px);
   }
 }
