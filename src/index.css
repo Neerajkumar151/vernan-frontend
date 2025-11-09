@@ -1,6 +1,3 @@
-/* =========================
-   NAVBAR FIXED LEFT + LOGO + BUTTON VISIBLE (Adaptive)
-========================= */
 html, body {
   scroll-behavior: smooth;
   overscroll-behavior: none;
@@ -11,7 +8,6 @@ html, body {
   overflow: hidden;
 }
 
-/* ✅ Mobile fix — enable vertical scrolling */
 @media (max-width: 768px) {
   html, body {
     overflow-x: hidden;
@@ -23,14 +19,10 @@ html, body {
   box-sizing: border-box;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-
 .navbar {
   width: 100%;
-  height: 10.54vh; /* 103px → adaptive */
-  padding: 0 3.12vw; /* 60px */
+  height: 10.54vh;
+  padding: 0 3.12vw; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,18 +34,14 @@ html, body {
   box-sizing: border-box;
 }
 
-/* =========================
-   NAVBAR2 — Transparent Background
-========================= */
-
 .navbar2 {
   width: 100vw;
   max-width: 1920px;
-  height: 9.54vh; /* 103px */
+  height: 9.54vh; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.04vw; /* 20px */
+  padding: 1.04vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -69,21 +57,17 @@ html, body {
   backdrop-filter: blur(8px);
 }
 
-/* =========================
-   NAVBAR ELEMENTS
-========================= */
-
 .vfilms-logo2 {
-  width: 9.06vw;  /* 174px */
+  width: 9.06vw;  
   height: auto;
   border-radius: 50px;
-  padding: 0.26vw 1.3vw 0.52vw 1.3vw; /* 5px 25px 10px 25px */
+  padding: 0.26vw 1.3vw 0.52vw 1.3vw; 
   object-fit: contain;
   cursor: pointer;
 }
 
 .equal-icon2 {
-  width: 2.6vw; /* 50px */
+  width: 2.6vw; 
   height: 2.6vw;
   cursor: pointer;
   object-fit: contain;
@@ -95,12 +79,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25vw; /* 24px */
+  gap: 1.25vw; 
 }
-
-/* =========================
-   FONT & LINKS
-========================= */
 
 .nav-links li a {
   color: #333;
@@ -118,15 +98,10 @@ html, body {
 }
 
 .nav-icon {
-  width: 2.35vw; /* 26px */
+  width: 2.35vw;
   height: 2.35vw;
   cursor: pointer;
 }
-
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
 @media (max-width: 1024px) {
   .navbar2 {
@@ -178,10 +153,6 @@ html, body {
   }
 }
 
-/* =========================
-   GLOBAL LAYOUT + SCROLL
-========================= */
-
 .app-wrapper {
   width: 100%;
   height: 100vh;
@@ -216,10 +187,6 @@ html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-/* =========================
-   NAVBAR LINKS
-========================= */
 
 .nav-left {
   display: flex;
@@ -267,12 +234,6 @@ html, body {
   cursor: pointer;
 }
 
-
-
-/* =========================
-   HERO (HOME PAGE) — ADAPTIVE
-========================= */
-
 .hero {
   width: 100vw;
   height: 100vh;
@@ -285,17 +246,15 @@ html, body {
   position: relative;
 }
 
-/* Overlay container that holds mandala + text */
 .hero-overlay {
   width: 100%;
-  max-width: 73vw; /* 1400px of 1920 */
+  max-width: 73vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2vw; /* 40px */
+  gap: 2vw;
 }
 
-/* Left mandala and logo */
 .hero-left {
   position: relative;
   text-align: center;
@@ -307,7 +266,7 @@ html, body {
 }
 
 .mandala {
-  width: 23.9vw; /* 420px → vw */
+  width: 23.9vw;
   opacity: 0.8;
 }
 
@@ -316,49 +275,41 @@ html, body {
   top: 51%;
   left: 51%;
   transform: translate(-50%, -50%);
-  width: 14.1vw; /* 270px */
+  width: 14.1vw;
 }
 
-/* Right text block */
 .hero-right {
-  max-width: 43vw; /* 825px */
+  max-width: 43vw;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Main quote */
 .hero-quote {
   font-family: "Island Moments", cursive;
-  font-size: clamp(2.5rem, 5vw, 6.5rem); /* 100px fluid */
+  font-size: clamp(2.5rem, 5vw, 6.5rem);
   font-weight: 400;
   color: #0f3255;
   line-height: 1.1;
-  margin-bottom: 2.8vh; /* 30px */
+  margin-bottom: 2.8vh;
 }
 
-/* Subtext below quote */
 .hero-sub {
   font-family: "Halant", serif;
-  font-size: clamp(1.2rem, 2vw, 2.5rem); /* 40px fluid */
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
   color: #ef4b2b;
-  margin: 0 auto 2.3vh auto; /* 25px bottom */
+  margin: 0 auto 2.3vh auto;
 }
 
-/* Description text */
 .hero-desc {
-  width: 25.4vw; /* 487px */
+  width: 25.4vw;
   font-size: clamp(0.8rem, 1.0vw, 1.2rem);
   color: #333;
   line-height: 1.3;
   text-align: center;
   margin: 0 auto;
 }
-
-/* =========================
-   RESPONSIVE BEHAVIOR
-========================= */
 
 @media (max-width: 1200px) {
   .hero-overlay {
@@ -435,11 +386,6 @@ html, body {
   }
 }
 
-
-/* =========================
-   ABOUT TEAM PAGE — ADAPTIVE
-========================= */
-
 .about-team {
   width: 100vw;
   height: 100vh;
@@ -453,7 +399,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Scale wrapper to maintain Figma proportions */
 .about-scale-wrapper {
   position: absolute;
   width: 100vw;
@@ -466,105 +411,87 @@ html, body {
   z-index: 3;
 }
 
-/* =========================
-   ELEMENTS
-========================= */
-
-/* Note Image */
 .note-img {
   position: absolute;
-  width: 30.1vw;  /* 520px */
+  width: 30.1vw;
   height: auto;
-  top: 0.2vh; /* 132px */
-  left: 8.1vw; /* 251px */
+  top: 0.2vh;
+  left: 8.1vw;
   z-index: 1000;
 }
 
-/* India Gate */
 .indiagate-img {
   position: absolute;
-  width: 19.8vw; /* 342px */
+  width: 19.8vw;
   height: auto;
-  bottom: 5vh; /* 560px */
-  left: 5.3vw; /* 140px */
+  bottom: 5vh;
+  left: 5.3vw;
 }
 
-/* Silhouettes */
 .silhouettes-img {
   position: absolute;
-  width: 32.5vw; /* 528px */
+  width: 32.5vw;
   height: auto;
-  bottom: 23vh; /* 391px */
-  left: 52vw; /* 1000px */
+  bottom: 23vh;
+  left: 52vw;
 }
 
-/* Arrows */
 .arrow-branding {
   position: absolute;
-  width: 10.3vw; /* 198px */
+  width: 10.3vw;
   height: auto;
-  top: 50.6vh; /* 503px */
-  left: 39vw; /* 692px */
+  top: 50.6vh;
+  left: 39vw;
 }
 
 .arrow-filmmakers {
   position: absolute;
-  width: 7.9vw; /* 151px */
+  width: 7.9vw;
   height: auto;
-  top: 21.2vh; /* 229px */
-  left: 57.6vw; /* 1107px */
+  top: 21.2vh;
+  left: 57.6vw;
 }
 
 .arrow-art {
   position: absolute;
-  width: 5.4vw; /* 103px */
+  width: 5.4vw;
   height: auto;
-  top: 36.4vh; /* 393px */
-  left: 85.6vw; /* 1548px */
+  top: 36.4vh;
+  left: 85.6vw;
 }
-
-/* =========================
-   TEXT STYLES
-========================= */
 
 .about-desc-text {
   position: absolute;
-  width: 36.4vw; /* 700px */
-  bottom: 13vh; /* 735px */
-  left: 48.4vw; /* 891px */
+  width: 36.4vw;
+  bottom: 13vh;
+  left: 48.4vw;
   font-family: "Halant", serif;
   font-weight: 400;
-  font-size: clamp(1.1rem, 1.7vw, 2rem); /* 30px */
+  font-size: clamp(1.1rem, 1.7vw, 2rem);
   color: #0f3255;
   text-align: center;
 }
 
-/* Category Texts */
 .branding-text1,
 .filmmakers-text,
 .artcurators-text {
   position: absolute;
   font-family: "Island Moments", cursive;
-  font-size: clamp(1.2rem, 1.8vw, 2.25rem); /* 36px */
+  font-size: clamp(1.2rem, 1.8vw, 2.25rem);
   color: #0f3255;
   line-height: 1.1;
 }
 
-/* Individual positioning */
 .branding-text1 { top: 73vh; left: 32.4vw; }
 .filmmakers-text { top: 13.8vh; left: 54.2vw; }
 .artcurators-text { top: 26.6vh; left: 87.8vw; }
 
-/* =========================
-   BUTTON
-========================= */
-
 .about-btn {
   position: absolute;
-  width: 8.1vw; /* 136px */
-  height: 5.4vh; /* 44px */
-  bottom: 8vh; /* 825px */
-  right: 30vw; /* 1213px */
+  width: 8.1vw;
+  height: 5.4vh;
+  bottom: 8vh;
+  right: 30vw;
   border-radius: 24px;
   padding: 1vh 1vw;
   background-color: #ef4b2b;
@@ -582,11 +509,6 @@ html, body {
   background-color: #d8431f;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
-
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
 @media (max-width: 1200px) {
   .about-scale-wrapper img {
@@ -638,13 +560,6 @@ html, body {
   }
 }
 
-
-
-
-/* =========================
-   FIGMA SCROLL INDICATOR
-========================= */
-
 .scroll-indicator-container {
   position: fixed;
   bottom: 30px;
@@ -668,12 +583,6 @@ html, body {
   background: none;
 }
 
-
-
-/* =========================
-   ABOUT US PAGE — ADAPTIVE
-========================= */
-
 .aboutus {
   width: 100vw;
   height: 100vh;
@@ -687,7 +596,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Maintain central scaling proportions */
 .aboutus-scale-wrapper {
   position: absolute;
   width: 100vw;
@@ -699,15 +607,11 @@ html, body {
   overflow: visible;
 }
 
-/* =========================
-   LEFT HEADING + SUBTEXT
-========================= */
-
 .aboutus-heading {
   position: absolute;
-  width: 37.4vw;      /* 662 px */
-  top: 24vh;          /* 240 px */
-  left: 11.5vw;       /* 220 px */
+  width: 37.4vw;
+  top: 24vh;
+  left: 11.5vw;
   font-family: "Halant", serif;
   font-size: clamp(1.4rem, 1.9vw, 2.1rem);
   color: #0f3255;
@@ -717,7 +621,7 @@ html, body {
 
 .aboutus-subtext {
   position: absolute;
-  width: 25vw; /* wider for multi-line layout */
+  width: 25vw;
   top: 32.5vh;
   left: 26vw;
   transform: translateX(-50%);
@@ -729,59 +633,45 @@ html, body {
   font-weight: 300;
 }
 
-
-/* =========================
-   RIGHT CURSIVE TEXT
-========================= */
-
 .aboutus-righttext {
   position: absolute;
-  width: 47.4vw;      /* 910 px */
-  top: 8.1vh;        /* 120 px */
-  left: 48.7vw;       /* 800 px */
+  width: 47.4vw;
+  top: 8.1vh;
+  left: 48.7vw;
   font-family: "Island Moments", cursive;
   font-weight: 400;
-  font-size: clamp(2.2rem, 3.5vw, 4.2rem); /* ~67 px */
+  font-size: clamp(2.2rem, 3.5vw, 4.2rem);
   line-height: 1;
   text-align: center;
   color: #0f3255;
   opacity: 1;
 }
 
-/* =========================
-   STICKERS & ILLUSTRATIONS
-========================= */
-
 .sticker {
   position: absolute;
   opacity: 1;
-  bottom: 10vh; /* 490 px */
+  bottom: 10vh;
 }
 
 .sticker1 { width: 17.7vw; height: auto; left: 6.3vw; }
 .sticker2 { width: 17.7vw; height: auto; left: 16.3vw; }
 .sticker3 { width: 17.7vw; height: auto; left: 26.3vw; }
 
-/* Semicircle + Mountain Sun */
 .semicircle-img {
   position: absolute;
-  width: 46.2vw;  /* 830 px */
+  width: 46.2vw;
   height: auto;
-  bottom: 0vh;    /* 460 px */
-  right: 0vw;   /* 915 px */
+  bottom: 0vh;
+  right: 0vw;
 }
 
 .mountain-sun-img {
   position: absolute;
-  width: 29.4vw;  /* 450 px */
+  width: 29.4vw;
   height: auto;
-  bottom: 0vh;   /* 580 px */
-  right: 7vw;   /* 1150 px */
+  bottom: 0vh;
+  right: 7vw;
 }
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
 @media (max-width: 1200px) {
   .aboutus-righttext {
@@ -868,13 +758,6 @@ html, body {
   }
 }
 
-
-
-
-/* =========================
-   SERVICES PAGE — ADAPTIVE
-========================= */
-
 .services {
   width: 100vw;
   height: 100vh;
@@ -890,7 +773,6 @@ html, body {
   padding: 0;
 }
 
-/* Scale wrapper maintains 1920×1080 ratio */
 .services-scale-wrapper {
   position: absolute;
   width: 100vw;
@@ -902,18 +784,14 @@ html, body {
   overflow: visible;
 }
 
-/* =========================
-   HEADING & UNDERLINE
-========================= */
-
 .services-heading {
   position: absolute;
-  width: 45.7vw; /* 878px */
-  top: 7.5vh;   /* 135px */
-  left: 27vw;    /* 521px */
+  width: 45.7vw;
+  top: 7.5vh;
+  left: 27vw;
   font-family: "Halant", serif;
   font-weight: 400;
-  font-size: clamp(1.3rem, 2vw, 2.25rem); /* ~36px fluid */
+  font-size: clamp(1.3rem, 2vw, 2.25rem);
   line-height: 1;
   text-align: center;
   color: #0F3255;
@@ -921,44 +799,36 @@ html, body {
 
 .underline-img {
   position: absolute;
-  width: 43vw;   /* 828px */
+  width: 43vw;
   height: auto;
-  top: 14.1vh;   /* 151.89px */
+  top: 14.1vh;
   left: 28.3vw;
   opacity: 1;
 }
 
-/* =========================
-   TAPE DECORATIONS
-========================= */
-
 .tape {
   position: absolute;
-  width: 12.2vw; /* 234px */
+  width: 12.2vw;
   height: auto;
   opacity: 1;
   z-index: 5;
 }
 
 .tape-left {
-  top: 19.3vh; /* 190px */
-  left: 14.3vw; /* 255px */
+  top: 19.3vh;
+  left: 14.3vw;
 }
 
 .tape-middle {
-  top: 25.6vh; /* 255px */
-  left: 41.6vw; /* 800px */
+  top: 25.6vh;
+  left: 41.6vw;
 }
 
 .tape-right {
-  top: 18.6vh; /* 180px */
-  left: 69.1vw; /* 1307px */
+  top: 18.6vh;
+  left: 69.1vw;
   transform: rotate(-180deg);
 }
-
-/* =========================
-   SERVICE IMAGES (Cards)
-========================= */
 
 .services-images {
   position: absolute;
@@ -967,7 +837,6 @@ html, body {
   z-index: 2;
 }
 
-/* Base card styles */
 .service-img {
   position: absolute;
   background: transparent;
@@ -985,36 +854,29 @@ html, body {
   box-shadow: 0 1vw 3vw 0 #00000040;
 }
 
-/* --- Film Production Card --- */
 .film {
-  width: 24.4vw; /* 449.4px */
+  width: 24.4vw;
   height: auto;
-  top: 21vh; /* 205px */
-  left: 12.4vw; /* 238.55px */
+  top: 21vh;
+  left: 12.4vw;
   transform: rotate(8deg);
 }
 
-/* --- Branding Card --- */
 .branding {
-  width: 22.9vw; /* 439.4px */
+  width: 22.9vw;
   height: auto;
-  top: 29.1vh; /* 281.66px */
-  left: 36.4vw; /* 680.3px */
+  top: 29.1vh;
+  left: 36.4vw;
   transform: rotate(0deg);
 }
 
-/* --- Art Curation Card --- */
 .art {
-  width: 24.4vw; /* 449.4px */
+  width: 24.4vw;
   height: auto;
   top: 21vh;
-  left: 59.4vw; /* 1120.85px */
+  left: 59.4vw;
   transform: rotate(-8deg);
 }
-
-/* =========================
-   BORDER DESIGN
-========================= */
 
 .border-design {
   position: absolute;
@@ -1025,10 +887,6 @@ html, body {
   z-index: 1;
   pointer-events: none;
 }
-
-/* =========================
-   RESPONSIVE ADAPTATION
-========================= */
 
 @media (max-width: 1200px) {
   .services-heading {
@@ -1129,14 +987,6 @@ html, body {
   }
 }
 
-
-
-
-
-/* =========================
-   FILM PRODUCTION PAGE — ADAPTIVE
-========================= */
-
 .film-production {
   width: 100vw;
   height: 100vh;
@@ -1150,7 +1000,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Maintain 1920x1080 proportions */
 .film-scale-wrapper {
   position: absolute;
   width: 100vw;
@@ -1162,15 +1011,11 @@ html, body {
   overflow: visible;
 }
 
-/* =========================
-   HEADING + UNDERLINE
-========================= */
-
 .film-heading {
   position: absolute;
-  width: 57vw;  /* 1100px */
-  top: 7.3vh;   /* 100px */
-  left: 21.3vw; /* 409px */
+  width: 57vw;
+  top: 7.3vh;
+  left: 21.3vw;
   font-family: "Halant", serif;
   font-weight: 400;
   font-size: clamp(1.5rem, 2vw, 2.2rem);
@@ -1181,11 +1026,11 @@ html, body {
 
 .film-back {
   position: absolute;
-  width: 8.3vw; /* 160px */
-  height: 10.8vh; /* 90px */
-  top: 19.9vh; /* 215px */
-  left: 10vw; /* 230px */
-  border-radius: 2vw; /* 24px */
+  width: 8.3vw;
+  height: 10.8vh;
+  top: 19.9vh;
+  left: 10vw;
+  border-radius: 2vw;
   padding: 0.8vw 1vw;
   background: transparent;
   cursor: pointer;
@@ -1197,7 +1042,6 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Optional if image/button inside needs centering */
 .film-back img {
   width: 100%;
   height: auto;
@@ -1207,21 +1051,17 @@ html, body {
 
 .film-underline {
   position: absolute;
-  width: 58.4vw; /* 968px */
+  width: 58.4vw;
   height: auto;
-  top: 14.4vh;   /* 22vh roughly */
-  left: 20.5vw;  /* 27vw */
+  top: 14.4vh;
+  left: 20.5vw;
 }
-
-/* =========================
-   MAIN IMAGE WRAPPER
-========================= */
 
 .film-main-img-wrapper {
   position: absolute;
-  top: 24.4vh;   /* 220px */
-  left: 18.3vw;  /* 410px */
-  width: 23.4vw; /* 429.4px */
+  top: 24.4vh;
+  left: 18.3vw;
+  width: 23.4vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -1243,15 +1083,11 @@ html, body {
   margin-top: 1vh;
 }
 
-/* =========================
-   TEXT PARAGRAPH
-========================= */
-
 .film-text {
   position: absolute;
-  width: 27vw; /* 520px */
-  top: 26.1vh; /* 252px */
-  left: 46.4vw; /* 890px */
+  width: 27vw;
+  top: 26.1vh;
+  left: 46.4vw;
   font-family: "Instrument Sans", sans-serif;
   font-size: clamp(1rem, 1.3vw, 1.6rem);
   line-height: 1.5;
@@ -1259,15 +1095,11 @@ html, body {
   text-align: left;
 }
 
-/* =========================
-   EXPLORE TEXT + ARROW
-========================= */
-
 .film-explore-text {
   position: absolute;
-  width: 10.4vw; /* 200px */
-  top: 79vh; /* 700px */
-  left: 44.8vw; /* 860px */
+  width: 10.4vw;
+  top: 79vh;
+  left: 44.8vw;
   font-family: "Instrument Sans", sans-serif;
   font-weight: 500;
   font-size: clamp(0.9rem, 1.1vw, 1.2rem);
@@ -1279,10 +1111,10 @@ html, body {
 
 .film-arrow {
   position: absolute;
-  width: 7.2vw; /* 120px */
+  width: 7.2vw;
   height: auto;
-  top: 84.5vh; /* 740px */
-  left: 46.9vw; /* 900px */
+  top: 84.5vh;
+  left: 46.9vw;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -1291,45 +1123,37 @@ html, body {
   transform: scale(1.1);
 }
 
-/* =========================
-   DECORATIVE CAMERAS
-========================= */
-
 .film-cam-left {
   position: absolute;
-  width: 5.2vw; /* 100px */
+  width: 5.2vw;
   height: auto;
-  top: 74.4vh; /* 620px */
-  left: 12.1vw; /* 290px */
+  top: 74.4vh;
+  left: 12.1vw;
 }
 
 .film-cam-right-top {
   position: absolute;
-  width: 4.7vw; /* 91px */
+  width: 4.7vw;
   height: auto;
-  top: 19.9vh; /* 215px */
-  left: 81.5vw; /* 1470px */
+  top: 19.9vh;
+  left: 81.5vw;
 }
 
 .film-cam-middle {
   position: absolute;
   width: 4.7vw;
   height: auto;
-  top: 53.5vh; /* 470px */
-  left: 70.1vw; /* 1327px */
+  top: 53.5vh;
+  left: 70.1vw;
 }
 
 .film-cam-right-bottom {
   position: absolute;
   width: 4.2vw;
   height: auto;
-  top: 73.2vh; /* 650px */
-  left: 80.5vw; /* 1490px */
+  top: 73.2vh;
+  left: 80.5vw;
 }
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
 @media (max-width: 1200px) {
   .film-heading {
@@ -1445,13 +1269,6 @@ html, body {
   }
 }
 
-
-
-
-/* =========================
-   BRANDING PAGE — ADAPTIVE
-========================= */
-
 .branding-page {
   width: 100vw;
   height: 100vh;
@@ -1465,7 +1282,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Maintain 1920×1080 proportions */
 .branding-scale-wrapper {
   position: absolute;
   width: 100vw;
@@ -1477,16 +1293,11 @@ html, body {
   overflow: visible;
 }
 
-
-/* =========================
-   HEADING
-========================= */
-
 .branding-heading {
   position: absolute;
-  width: 57vw;  /* 1100px */
-  top: 6.9vh;   /* 100px */
-  left: 21.3vw; /* 409px */
+  width: 57vw;
+  top: 6.9vh;
+  left: 21.3vw;
   font-family: "Halant", serif;
   font-weight: 400;
   font-size: clamp(1.5rem, 2vw, 2.2rem);
@@ -1495,15 +1306,11 @@ html, body {
   line-height: 1.2;
 }
 
-/* =========================
-   MAIN IMAGE WRAPPER
-========================= */
-
 .branding-main-img-wrapper {
   position: absolute;
-  top: 24.4vh;   /* 220px */
-  left: 18.3vw;  /* 410px */
-  width: 23.4vw; /* 429.4px */
+  top: 24.4vh;
+  left: 18.3vw;
+  width: 23.4vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -1518,15 +1325,11 @@ html, body {
   object-fit: cover;
 }
 
-/* =========================
-   PARAGRAPH TEXT
-========================= */
-
 .branding-text {
   position: absolute;
-  width: 27vw; /* 520px */
-  top: 25vh;   /* 242px */
-  left: 46.4vw; /* 890px */
+  width: 27vw;
+  top: 25vh;
+  left: 46.4vw;
   font-family: "Instrument Sans", sans-serif;
   font-size: clamp(1rem, 1.3vw, 1.6rem);
   line-height: 1.5;
@@ -1534,45 +1337,37 @@ html, body {
   text-align: left;
 }
 
-/* =========================
-   DECORATIVE ICONS
-========================= */
-
 .branding-left {
   position: absolute;
-  width: 5.2vw; /* 100px */
+  width: 5.2vw;
   height: auto;
-  top: 76vh; /* 660px */
-  left: 11vw; /* 290px */
+  top: 76vh;
+  left: 11vw;
 }
 
 .branding-right-top {
   position: absolute;
-  width: 5.9vw; /* 91px */
+  width: 5.9vw;
   height: auto;
-  top: 20vh; /* 195px */
-  left: 83.5vw; /* 1470px */
+  top: 20vh;
+  left: 83.5vw;
 }
 
 .branding-right-middle {
   position: absolute;
-  width: 4.3vw; /* 91px */
+  width: 4.3vw;
   height: auto;
-  top: 55.5vh; /* 470px */
-  left: 69.1vw; /* 1327px */
+  top: 55.5vh;
+  left: 69.1vw;
 }
 
 .branding-right-bottom {
   position: absolute;
-  width: 6.8vw; /* 111px */
+  width: 6.8vw;
   height: auto;
-  top: 76.2vh; /* 650px */
-  left: 82.5vw; /* 1470px */
+  top: 76.2vh;
+  left: 82.5vw;
 }
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
 @media (max-width: 1200px) {
   .branding-heading {
@@ -1654,12 +1449,6 @@ html, body {
   }
 }
 
-
-
-/* =========================
-   ART CURATION PAGE — ADAPTIVE
-========================= */
-
 .art-page {
   width: 100vw;
   height: 100vh;
@@ -1673,7 +1462,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Maintain 1920×1080 proportions */
 .art-scale-wrapper {
   position: absolute;
   width: 100vw;
@@ -1685,15 +1473,11 @@ html, body {
   overflow: visible;
 }
 
-/* =========================
-   HEADING
-========================= */
-
 .art-heading {
   position: absolute;
-  width: 57vw;  /* 1100px */
-  top: 7.6vh;   /* 100px */
-  left: 21.3vw; /* 409px */
+  width: 57vw;
+  top: 7.6vh;
+  left: 21.3vw;
   font-family: "Halant", serif;
   font-weight: 400;
   font-size: clamp(1.5rem, 2vw, 2.2rem);
@@ -1702,15 +1486,11 @@ html, body {
   line-height: 1.2;
 }
 
-/* =========================
-   MAIN TEXT
-========================= */
-
 .art-text {
   position: absolute;
-  width: 27vw; /* 520px */
-  top: 24vh;   /* 242px */
-  left: 45.4vw; /* 890px */
+  width: 27vw;
+  top: 24vh;
+  left: 45.4vw;
   font-family: "Instrument Sans", sans-serif;
   font-size: clamp(1rem, 1.3vw, 1.6rem);
   line-height: 1.5;
@@ -1718,45 +1498,37 @@ html, body {
   text-align: left;
 }
 
-/* =========================
-   DECORATIVE ICONS
-========================= */
-
 .art-left {
   position: absolute;
-  width: 5.2vw; /* 100px */
+  width: 5.2vw;
   height: auto;
-  top: 76vh; /* 660px */
-  left: 11.1vw; /* 290px */
+  top: 76vh;
+  left: 11.1vw;
 }
 
 .art-right-top {
   position: absolute;
-  width: 5.7vw; /* 91px */
+  width: 5.7vw;
   height: auto;
-  top: 20vh; /* 195px */
-  left: 80.5vw; /* 1470px */
+  top: 20vh;
+  left: 80.5vw;
 }
 
 .art-right-middle {
   position: absolute;
-  width: 4.7vw; /* 91px */
+  width: 4.7vw;
   height: auto;
-  top: 57vh; /* 530px */
-  left: 69.1vw; /* 1327px */
+  top: 57vh;
+  left: 69.1vw;
 }
 
 .art-right-bottom {
   position: absolute;
-  width: 6.8vw; /* 111px */
+  width: 6.8vw;
   height: auto;
-  top: 74.2vh; /* 650px */
-  left: 76.5vw; /* 1430px */
+  top: 74.2vh;
+  left: 76.5vw;
 }
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
 @media (max-width: 1200px) {
   .art-heading {
@@ -1824,12 +1596,6 @@ html, body {
   }
 }
 
-
-
-/* =========================
-   PORTFOLIO PAGE — ADAPTIVE (NO BACK BUTTON)
-========================= */
-
 .portfolio {
   width: 100vw;
   height: 100vh;
@@ -1843,7 +1609,6 @@ html, body {
   justify-content: center;
 }
 
-/* Maintain 1920×1080 proportions */
 .portfolio-scale-wrapper {
   position: absolute;
   width: 100vw;
@@ -1855,13 +1620,9 @@ html, body {
   overflow: visible;
 }
 
-/* =========================
-   CENTER TEXT
-========================= */
-
 .portfolio-heading {
   position: absolute;
-  width: 19vw; /* 364px */
+  width: 19vw;
   top: 7vh;
   left: 40.5vw;
   text-align: center;
@@ -1885,16 +1646,12 @@ html, body {
   line-height: 1.2;
 }
 
-/* =========================
-   CENTER VIDEO FRAME
-========================= */
-
 .portfolio-center-frame {
   position: absolute;
-  top: 25vh;  /* 198px */
-  left: 19.4vw; /* 469px */
-  width: 62vw;  /* 981px */
-  height: 62vh; /* 603px */
+  top: 25vh;
+  left: 19.4vw;
+  width: 62vw;
+  height: 62vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1909,37 +1666,30 @@ html, body {
   z-index: 1;
 }
 
-/* =========================
-   DECORATIVE ELEMENTS
-========================= */
-
-/* Left Camera */
 .portfolio-left-camera {
   position: absolute;
-  width: 11.7vw;  /* 187px */
+  width: 11.7vw;
   height: auto;
-  top: 20vh;     /* 220px */
-  left: 8.5vw;  /* 240px */
+  top: 20vh;
+  left: 8.5vw;
   opacity: 1;
   z-index: 2;
 }
 
-/* Right Pattern */
 .portfolio-right-pattern {
   position: absolute;
-  width: 16.7vw; /* 340px */
+  width: 16.7vw;
   height: auto;
-  bottom: 0vh;     /* 380px */
-  right: 0vw;  /* 1410px */
+  bottom: 0vh;
+  right: 0vw;
   opacity: 1;
   z-index: 2;
 }
 
-/* Left Rectangle */
 .portfolio-left-rect {
   position: absolute;
-  width: 4.6vw;  /* 70px */
-  height: 40.7vh; /* 288px */
+  width: 4.6vw;
+  height: 40.7vh;
   top: 11.0vh;
   left: 8.7vw;
   border-radius: 4px;
@@ -1947,10 +1697,9 @@ html, body {
   z-index: 3;
 }
 
-/* Right Rectangle */
 .portfolio-right-rect {
   position: absolute;
-  width: 4.6vw;  /* 70px */
+  width: 4.6vw;
   height: 40.7vh;
   top: 11.0vh;
   left: 48.5vw;
@@ -1959,11 +1708,10 @@ html, body {
   z-index: 3;
 }
 
-/* Left Arrow */
 .portfolio-left-arrow {
   position: absolute;
-  width: 2.8vw;  /* 39.74px */
-  height: 17vh;  /* 129.84px */
+  width: 2.8vw;
+  height: 17vh;
   top: 25vh;
   left: 9.7vw;
   opacity: 1;
@@ -1975,10 +1723,9 @@ html, body {
   transform: scale(1.2);
 }
 
-/* Right Arrow */
 .portfolio-right-arrow {
   position: absolute;
-  width: 2.8vw;  /* 39.74px */
+  width: 2.8vw;
   height: 17vh;
   top: 25vh;
   left: 49.7vw;
@@ -1990,10 +1737,6 @@ html, body {
 .portfolio-right-arrow:hover {
   transform: scale(1.2);
 }
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
 @media (max-width: 1200px) {
   .portfolio-heading {
@@ -2069,12 +1812,6 @@ html, body {
   }
 }
 
-
-
-/* =========================
-   CONTACT PAGE — ADAPTIVE
-========================= */
-
 .contact {
   width: 100vw;
   height: 100vh;
@@ -2088,7 +1825,6 @@ html, body {
   justify-content: center;
 }
 
-/* Maintain 1920×1080 base proportion */
 .contact-scale-wrapper {
   position: absolute;
   width: 100vw;
@@ -2100,39 +1836,31 @@ html, body {
   overflow: visible;
 }
 
-/* =========================
-   BACKGROUND DECORATIONS
-========================= */
-
 .contact-left-pattern {
   position: absolute;
-  width: 22vw; /* 390px */
+  width: 22vw;
   height: auto;
-  bottom: 0vh;   /* 460px */
-  left: 0vw;   /* 50px */
+  bottom: 0vh;
+  left: 0vw;
   opacity: 1;
   z-index: 1;
 }
 
 .contact-right-pattern {
   position: absolute;
-  width: 23.8vw; /* 420px */
+  width: 23.8vw;
   height: auto;
-  top: 0vh;      /* 68px */
-  right: 0vw;    /* 1340px */
+  top: 0vh;
+  right: 0vw;
   opacity: 1;
   z-index: 1;
 }
 
-/* =========================
-   LEFT TEXT
-========================= */
-
 .contact-left-text {
   position: absolute;
-  width: 31vw; /* 600px */
-  top: 39vh;   /* 467px */
-  left: 9vw;  /* 210px */
+  width: 31vw;
+  top: 39vh;
+  left: 9vw;
   font-family: "Instrument Sans", sans-serif;
   font-size: clamp(1rem, 1.25vw, 1.4rem);
   font-weight: 400;
@@ -2142,26 +1870,21 @@ html, body {
   z-index: 2;
 }
 
-/* =========================
-   FORM SECTION
-========================= */
-
 .contact-form-section {
   position: absolute;
-  width: 47.5vw; /* 700px */
+  width: 47.5vw;
   height: auto;
-  top: 18vh; /* 200px */
-  left: 47vw; /* 1010px */
+  top: 18vh;
+  left: 47vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 2vh; /* space between elements */
+  gap: 2vh;
   z-index: 3;
   text-align: center;
 }
 
-/* --- Heading --- */
 .contact-heading {
   font-family: "Halant", serif;
   font-size: clamp(1.6rem, 2vw, 2.2rem);
@@ -2172,7 +1895,6 @@ html, body {
   margin: 0;
 }
 
-/* --- Subtext --- */
 .contact-subtext {
   font-family: "Instrument Sans", sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.3rem);
@@ -2183,10 +1905,6 @@ html, body {
   margin-top: 0.1vh;
   margin-bottom: 4vh;
 }
-
-/* =========================
-   FORM BODY
-========================= */
 
 .contact-form {
   display: flex;
@@ -2222,7 +1940,6 @@ html, body {
   min-height: 120px;
 }
 
-/* Prevent movement when validation text appears */
 .contact-message {
   min-height: 1.5rem;
   font-size: clamp(0.8rem, 1vw, 1rem);
@@ -2231,13 +1948,9 @@ html, body {
   transition: opacity 0.2s ease;
 }
 
-/* =========================
-   SUBMIT BUTTON
-========================= */
-
 .contact-submit {
-  width: 8vw; /* 93px */
-  height: 7.5vh; /* 46px */
+  width: 8vw;
+  height: 7.5vh;
   border-radius: 24px;
   padding: 0.6vh 1vw;
   border: none;
@@ -2260,10 +1973,6 @@ html, body {
   object-fit: contain;
 }
 
-/* =========================
-   FOOTER CONTACT INFO
-========================= */
-
 .contact-footer {
   display: flex;
   flex-direction: row;
@@ -2282,10 +1991,6 @@ html, body {
   color: #ef4b2b;
   font-weight: 500;
 }
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
 @media (max-width: 1200px) {
   .contact-left-text {
@@ -2368,9 +2073,6 @@ html, body {
   }
 }
 
-
-
-/* Allow vertical scroll only on small screens (mobile) */
 @media (max-width: 768px) {
   html, body {
     overflow-x: hidden;
@@ -2415,17 +2117,8 @@ html, body {
   }
 }
 
-
-
-/* =========================
-   MOBILE LAYOUT FIX: OVERRIDE ABSOLUTE POSITIONING (<= 768px)
-========================= */
-
 @media (max-width: 768px) {
 
-  /* --- 1. Global Wrapper Reset --- */
-
-  /* Force all "scale wrappers" to use normal document flow (relative position, full width, column direction) */
   .about-scale-wrapper,
   .aboutus-scale-wrapper,
   .services-scale-wrapper,
@@ -2440,17 +2133,14 @@ html, body {
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-    height: auto !important; /* Allow content to dictate height */
+    height: auto !important;
     width: 100% !important;
-    display: flex; /* Use flexbox to align content vertically */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10vh 5vw 5vh 5vw; /* Add vertical padding for breathing room */
+    padding: 10vh 5vw 5vh 5vw;
   }
 
-  /* --- 2. Absolute Element Reset --- */
-
-  /* Force all formerly absolutely-positioned children (images, text blocks) into flow */
   .about-scale-wrapper > *,
   .aboutus-scale-wrapper > *,
   .film-scale-wrapper > *,
@@ -2464,49 +2154,40 @@ html, body {
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-    margin: 10px auto !important; /* Center content horizontally and give vertical space */
-    width: 90% !important; /* Make most elements full width */
+    margin: 10px auto !important;
+    width: 90% !important;
     text-align: center !important;
     display: block;
-    box-sizing: border-box; /* Crucial for preventing horizontal overflow */
+    box-sizing: border-box;
   }
-
-  /* --- 3. Hide Decorative Overlays (They cause clutter/overflow on mobile) --- */
 
   .contact-left-pattern,
   .contact-right-pattern,
   .border-design,
   .tape,
-  /* Film, Branding, Art Deco Images */
   .film-cam-left, .film-cam-right-top, .film-cam-middle, .film-cam-right-bottom,
   .branding-left, .branding-right-top, .branding-right-middle, .branding-right-bottom,
   .art-left, .art-right-top, .art-right-middle, .art-right-bottom,
-  /* Portfolio Deco */
   .portfolio-left-camera, .portfolio-right-pattern,
   .portfolio-left-rect, .portfolio-right-rect,
-  /* About Us/About Team Deco Images */
   .semicircle-img, .mountain-sun-img,
   .indiagate-img, .silhouettes-img,
   .arrow-branding, .arrow-filmmakers, .arrow-art,
-  .underline-img /* Keep text headings visible, hide underline decoration */
+  .underline-img
   {
-    display: none !important; /* Hide elements that clutter the vertical flow */
+    display: none !important;
   }
 
-  /* --- 4. Content Specific Adjustments --- */
-
-  /* Text paragraphs need specific flow and sizing */
   .aboutus-subtext, .aboutus-righttext,
   .film-text, .branding-text, .art-text,
   .contact-left-text, .about-desc-text {
     width: 90% !important;
     text-align: center !important;
     font-size: clamp(1rem, 4vw, 1.2rem) !important;
-    order: 10; /* Push long text to the bottom of the flex container */
+    order: 10;
     margin: 10px auto 20px auto !important;
   }
 
-  /* Main Images (Film/Branding/Art/Portfolio center) */
   .film-main-img-wrapper, .branding-main-img-wrapper,
   .portfolio-center-frame {
     width: 85% !important;
@@ -2517,7 +2198,6 @@ html, body {
     position: relative !important;
   }
 
-  /* Services cards stacking vertically */
   .services-images {
       flex-direction: column !important;
       gap: 4vh;
@@ -2534,19 +2214,13 @@ html, body {
       left: auto !important;
   }
 
-  /* Scroll Indicator is often in the way on mobile, so hide it */
   .scroll-indicator-container {
     display: none;
   }
 }
 
-
-/* =========================
-   FINAL RESPONSIVE FIX FOR MOBILE LAYOUT
-========================= */
 @media (max-width: 768px) {
 
-  /* 1. Allow normal vertical flow */
   html, body {
     overflow-x: hidden;
     overflow-y: auto;
@@ -2554,12 +2228,10 @@ html, body {
     height: auto;
   }
 
-  /* 2. Remove any global scaling that squeezes content */
   body {
     transform: none !important;
   }
 
-  /* 3. Make every section full width and natural height */
   section,
   .hero,
   .aboutus,
@@ -2576,7 +2248,6 @@ html, body {
     overflow: visible !important;
   }
 
-  /* 4. Force all wrapper divs to use full width and stack vertically */
   .hero-overlay,
   .services-scale-wrapper,
   .aboutus-scale-wrapper,
@@ -2592,20 +2263,17 @@ html, body {
     position: relative !important;
   }
 
-  /* 5. Images: scale down but still span container width */
   img {
     max-width: 90% !important;
     height: auto !important;
   }
 
-  /* 6. Text blocks: limit line length and center */
   h1, h2, h3, p {
     width: 90% !important;
     text-align: center !important;
     margin: 0 auto !important;
   }
 
-  /* 7. Navbar adjustments */
   .navbar, .navbar2 {
     width: 100%;
     justify-content: space-between;
@@ -2613,7 +2281,6 @@ html, body {
     z-index: 2000;
   }
 
-  /* 8. Horizontal scroll container becomes vertical stack */
   .horizontal-scroll {
     flex-direction: column !important;
     overflow-x: hidden !important;
@@ -2628,10 +2295,6 @@ html, body {
   }
 }
 
-
-/* =========================
-   TOAST MESSAGE STYLES
-========================= */
 .toast {
   position: fixed;
   top: 20px;
