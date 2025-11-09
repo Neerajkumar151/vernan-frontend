@@ -1,65 +1,3 @@
-// import React, { useState, useRef, useEffect } from "react";
-// import Hero from "./components/Hero";
-// import AboutTeam from "./components/AboutTeam";
-// import AboutUs from "./components/AboutUs";
-// import Navbar from "./components/Navbar";
-// import Navbar2 from "./components/Navbar2";
-
-// export default function App() {
-//   const [activePage, setActivePage] = useState(0);
-//   const scrollRef = useRef(null);
-
-//   useEffect(() => {
-//     const scrollContainer = scrollRef.current;
-//     if (!scrollContainer) return;
-
-//     const handleScroll = () => {
-//       const { scrollLeft, clientWidth } = scrollContainer;
-//       const index = Math.round(scrollLeft / clientWidth);
-//       setActivePage(index);
-//     };
-
-//     scrollContainer.addEventListener("scroll", handleScroll);
-//     return () => scrollContainer.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <div className="app-wrapper">
-//       {/* ✅ Show only one Navbar based on page index */}
-//       {activePage === 0 ? <Navbar key="navbar1" /> : <Navbar2 key="navbar2" />}
-
-//       <div className="horizontal-scroll" ref={scrollRef}>
-//         {/* ✅ Hero does NOT render its own Navbar anymore */}
-//         <section className="panel">
-//           <Hero />
-//         </section>
-
-//         <section className="panel">
-//           <AboutTeam />
-//         </section>
-
-//         <section className="panel">
-//           <AboutUs />
-//         </section>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useRef, useEffect } from "react";
 import Hero from "./components/Hero";
 import AboutTeam from "./components/AboutTeam";
@@ -76,7 +14,6 @@ export default function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const scrollRef = useRef(null);
 
-  // ✅ You can update this when you add more pages
   const totalSections = 6;
 
   useEffect(() => {
@@ -98,10 +35,9 @@ export default function App() {
 
   return (
     <div className="app-wrapper">
-      {/* ✅ Navbar logic */}
+  
       {activePage === 0 ? <Navbar key="navbar1" /> : <Navbar2 key="navbar2" />}
 
-      {/* ✅ Scrollable Pages */}
       <div className="horizontal-scroll" ref={scrollRef}>
         <section className="panel"><Hero /></section>
         <section className="panel"><AboutTeam /></section>
@@ -111,7 +47,7 @@ export default function App() {
         <section className="panel"><Contact/></section>
       </div>
 
-      {/* ✅ Scroll indicator */}
+   
       <div className="scroll-indicator-container">
   <img
     src={scrollBarImg}

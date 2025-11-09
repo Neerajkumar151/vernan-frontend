@@ -9,10 +9,7 @@ import arrowArtCurators from "../assets/artcreators.svg";
 
 export default function AboutTeam() {
   return (
-    // This parent uses flexbox to center the design
     <section id="about-team" className="about-team" style={{ backgroundImage: `url(${bg})` }}>
-      
-      {/* This wrapper is the 1920x1080 artboard that gets scaled */}
       <div className="about-scale-wrapper">
         <img src={note} alt="Sticky Note" className="note-img" />
         <img src={indiaGate} alt="India Gate" className="indiagate-img" />

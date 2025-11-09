@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      {/* <img src={scrollBar} alt="Scroll bar" className="scroll-bar" /> */}
+      
     </section>
   );
 }

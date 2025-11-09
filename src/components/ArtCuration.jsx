@@ -13,27 +13,23 @@ export default function ArtCuration({ onBack }) {
   return (
     <section className="art-page" style={{ backgroundImage: `url(${bg})` }}>
       <div className="art-scale-wrapper">
-        {/* Back button */}
+        
         <img
           src={backBtn}
           alt="Back"
-          className="film-back" /* Reuse */
+          className="film-back" 
           onClick={onBack}
         />
 
-        {/* Heading */}
         <h2 className="art-heading">
           “V take art where it belongs, to the people.” – Vernita Verma
         </h2>
-        <img src={underline} alt="Underline" className="film-underline" />
-
-        {/* Main image */}
+     
         <div className="film-main-img-wrapper">
           <img src={artMain} alt="Art Curation" className="film-main-img" />
         
         </div>
 
-        {/* Paragraph */}
         <p className="art-text">
           Art isn’t meant to sit on distant walls – it’s meant to breathe, to
           travel, to belong. <br />
@@ -46,11 +42,9 @@ export default function ArtCuration({ onBack }) {
           • Cultural Storytelling
         </p>
 
-        {/* Explore arrow */}
         <p className="film-explore-text">Explore Now</p>
         <img src={arrow} alt="Explore Arrow" className="film-arrow" />
 
-        {/* Decorative icons */}
         <img src={leftIcon} alt="Left Icon" className="art-left" />
         <img src={rightTop} alt="Right Top Icon" className="art-right-top" />
         <img src={rightMiddle} alt="Right Middle Icon" className="art-right-middle" />

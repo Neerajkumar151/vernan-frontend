@@ -11,7 +11,7 @@ export default function Contact() {
     phone: "",
     message: "",
   });
-  const [toast, setToast] = useState(""); // ✅ toast text
+  const [toast, setToast] = useState(""); 
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -52,8 +52,6 @@ export default function Contact() {
       setLoading(false);
     }
   };
-
-  // ✅ Auto-hide toast after 3 seconds
   useEffect(() => {
     if (toast) {
       const timer = setTimeout(() => setToast(""), 3000);
@@ -63,7 +61,7 @@ export default function Contact() {
 
   return (
     <section id="contact-us" className="contact" style={{ backgroundImage: `url(${bg})` }}>
-      {/* ✅ Toast container */}
+      
       {toast && (
         <div className={`toast ${toast.includes("Submitted") ? "toast-success" : "toast-error"}`}>
           {toast}

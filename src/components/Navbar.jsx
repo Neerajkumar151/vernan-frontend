@@ -16,14 +16,11 @@ export default function Navbar({ scrollToPage }) {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        {/* Example logo — clicking goes to Home (index 0) */}
-        {/* <a href="#" onClick={scrollToHome}>
-          <img src={vfilmsLogo} alt="VFilms Logo" className="nav-logo" />
-        </a> */}
+   
       </div>
 
       <ul className="nav-links">
-        {/* Page 1 → AboutTeam */}
+        
         <li>
   <a
     onClick={() => document.getElementById("services").scrollIntoView({ behavior: "smooth" })}
@@ -53,8 +50,6 @@ export default function Navbar({ scrollToPage }) {
   </a>
 </li>
 
-
-        {/* Page 4 (index 4) → Portfolio */}
         <li>
           <a onClick={() => document.getElementById("portfolio").scrollIntoView({ behavior: "smooth" })}
     style={{ cursor: "pointer" }}>
